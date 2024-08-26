@@ -30,10 +30,10 @@ if (isset($_GET['number1']) && isset($_GET['number2']) && isset($_GET['operation
     }
 
     if ($error) {
-        echo "<label class='orm-label'> Invalid operations </label>";
+        echo "<label class='form-label'> Invalid operations </label>";
     }
     else {
-        echo "<label class='orm-label'> The result is: <b> $result </br> </label>";
+        echo "<label class='form-label'> The result is: <b> $result </br> </label>";
     }
 }
   
