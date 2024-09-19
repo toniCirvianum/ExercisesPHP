@@ -20,6 +20,12 @@
     </p>
 
     </form>
+    <?php
+    if (isset($_GET['error']) && $_GET['error']==1) {
+        echo "<p style='color:red;'>Incorrect credentials. Try it again.</p>";
+
+    }
+    ?>
     
 </body>
 </html>
