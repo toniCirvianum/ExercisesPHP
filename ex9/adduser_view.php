@@ -36,7 +36,7 @@
 
         <div class="mb-3" stytle="display:none;">
             <!-- The model is included in the view-->
-            <?php include('adduser_model.php'); ?>
+            <?php include('adduser_controller.php'); ?>
         </div>
 
     </form>

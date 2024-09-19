@@ -37,7 +37,7 @@ if (isset($selectedUser)) {
     <body style="margin:15px;">
         <?php include('navbar.php'); ?>
 
-        <form action="edituser_model.php" class="w-50 mx-auto" method="GET">
+        <form action="edituser_controller.php" class="w-50 mx-auto" method="GET">
             <legend>Edit user: <?php echo $selectedUser['username']; ?></legend>
             <input type="hidden" name="userKey" value="<?php echo $userKey; ?>">
 

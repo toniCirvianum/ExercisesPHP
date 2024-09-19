@@ -13,11 +13,11 @@
 <body style="margin:15px;">
     <?php include('navbar.php'); ?>
 
-    <form action="deluser_view.php" class="w-50 mx-auto" method="GET">
-        <legend>Delete user</legend>
+    <form action="edituser_controller.php" class="w-50 mx-auto" method="GET">
+        <legend>Edit user</legend>
 
         <div class="mb-3">
-            <label for="username" class="form-label ">Choose a user to delete:</label>
+            <label for="username" class="form-label ">Choose a user to edit:</label>
             <select name="username" id="user" class="form-select">
             <!-- I get username from userlist_model.php-->
                 <?php
@@ -27,18 +27,15 @@
                     echo "<option value='$userToShow' >$userToShow</option>";
                 }
                 ?>
-        
             </select>
+
+
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Delete</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
 
-        <div class="mb-3" stytle="display:none;">
-            <!-- The model is included in the view-->
-            <?php include('deluser_model.php');?>
-            
-        </div>
+
 
     </form>
 
