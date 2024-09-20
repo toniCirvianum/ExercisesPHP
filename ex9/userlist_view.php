@@ -26,10 +26,15 @@
         include('userlist_model.php');
         foreach ($myUserList as $user => $user_params) {
             echo "<tr>";
+            foreach ($user_params as $param => $value) {
+              echo "<td>".$value." </td>";
+            }
+            /*
             echo "<td> {$user_params['username']} </td>";
             echo "<td> {$user_params['password']} </td>";
             echo "<td> {$user_params['rol']} </td>";
             echo "</tr>";
+            */
         }
     ?>
 

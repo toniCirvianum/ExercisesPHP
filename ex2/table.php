@@ -6,23 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex2: Fill HTML Table</title>
 </head>
-<style>
-    .menu {
-        border: 1px solid #ccc;
-        margin: 20px 0;
-        padding: 20px;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-    }
 
-    .menu h2 {
-        margin-top: 0;
-    }
-
-    .menu p {
-        margin: 5px 0;
-    }
-</style>
 
 <body>
     <?php
@@ -55,12 +39,12 @@
     }';
 
     $menu = json_decode($myJson, true);
-    foreach ($menu as $menu_name => $menu_items) {
+    foreach ($menu as $menu_name => $menu_plates) {
         echo "<div class='menu'>";
         echo "<h2>$menu_name</h2>";
-        echo "<p><strong>First Plate:</strong> {$menu_items['first_plate']}</p>";
-        echo "<p><strong>Second Plate:</strong> {$menu_items['second_plate']}</p>";
-        echo "<p><strong>Dessert:</strong> {$menu_items['dessert']}</p>";
+        foreach ($menu_plates as $plate => $item) {
+            echo "<p> ".$plate.": ".$item."</p>";
+        }
         echo "</div>";
     }
 
