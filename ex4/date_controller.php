@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $datetime = new DateTime($_POST['date']);
         $option = $_POST['option'];
         switch ($option) {
-            case 'date$date':
+            case 'Year':
                 $date = $datetime->format('Y');
                 echo "<p>" . $date . "</p>";
                 break;
