@@ -18,6 +18,8 @@ if (isset($_GET['username']) && isset($_GET['password']) && isset($_GET['rol']))
         echo "</label>";
     }
     echo "<label class='form-label mb-3 text-info' >";
+    echo "<pre>";
     print_r($myUserList);
+    echo "</pre>";
     echo "</label>";
 }

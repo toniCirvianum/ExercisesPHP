@@ -54,6 +54,9 @@
     <input type="hidden" name="numberToGuess" value="<?php echo $numberToGuess; ?>">
     <input type="hidden" name="intents" value="<?php echo $intents; ?>">
     <input type="submit" value="Send">
+    <label for=""><?php echo $intents?></label>    
+    <label for=""><?php echo $numberToGuess?></label>
+
 </form>
 
 </body>

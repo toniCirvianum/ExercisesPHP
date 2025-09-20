@@ -1,6 +1,7 @@
 <?php
 include('userlist_model.php');
 
+
 if ( isset($_GET['username']) && isset($_GET['password']) && isset($_GET['rol']) ) {
     $userKey = $_GET['userKey'];
     $newUsername = $_GET['username'];
@@ -14,7 +15,9 @@ if ( isset($_GET['username']) && isset($_GET['password']) && isset($_GET['rol'])
     ];
     echo "<label class='form-label mb-3 text-info' >";
     echo "<p class='mb-3'> User Updated! </p>"; 
+    echo "<pre>";
     print_r($myUserList);
+    echo "</pre>";
     echo "</label>";
 
 }

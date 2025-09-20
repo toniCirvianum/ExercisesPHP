@@ -14,7 +14,9 @@ if (isset($_GET['username'])){
     
     echo "<label class='form-label mb-3 text-danger' >";
     echo "<p class='mb-3'> User Deleted! </p>";
+    echo "<pre>";
     print_r($myUserList);
+    echo "</pre>";
     echo "</label>";
 }
 

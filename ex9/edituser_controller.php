@@ -5,12 +5,23 @@ if (isset($_GET['username'])) {
     $username = $_GET['username'];
 
 
+
     foreach ($myUserList as $key => $user) {
         if ($user['username'] === $username) {
             $selectedUser = $user;
-            $userKey = $key;
-            break; // We exit the loop once we find and delete the user
+            $userKey = $key; //We save the userKey of the edited user
+            break; // We exit the loop once we find and delete/edit the user
+
         }
+    }
+    //Went userkey is set, we find the user with this userkey
+    if (isset($_GET['userKey'])) {
+        foreach ($myUserList as $key => $user) {
+        if ($key == $_GET['userKey']) {
+            $selectedUser = $user; 
+            break; // We exit the loop once we find and delete/edit the user
+        }
+    }
     }
 }
 ?>
@@ -39,6 +50,7 @@ if (isset($selectedUser)) {
 
         <form action="edituser_controller.php" class="w-50 mx-auto" method="GET">
             <legend>Edit user: <?php echo $selectedUser['username']; ?></legend>
+            <!-- We send the user key to identify the user -->
             <input type="hidden" name="userKey" value="<?php echo $userKey; ?>">
 
             <div class="mb-3">
@@ -58,6 +70,7 @@ if (isset($selectedUser)) {
             </div>
 
 
+
             <button type="submit" class="btn btn-primary">Save Changes</button>
 
             <div class="mb-3" stytle="display:none;">
@@ -69,18 +82,14 @@ if (isset($selectedUser)) {
 
         <div class="mb-3" stytle="display:none;">
             <!-- Proces updating-->
-            
-            <?php include('edituser_update.php');?>
-            
+
+            <?php include('edituser_update.php'); ?>
+
         </div>
+
 
     </body>
 
     </html>
 
-    <?php } ?>
-
-
- 
-
-
+<?php } //It is necessary to close the bracket opened in line 34 ?>
